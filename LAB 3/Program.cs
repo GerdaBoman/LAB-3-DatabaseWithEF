@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace BookShop2._0;
-class Program : TotalInventoryOfEachShop
+class Program 
 {
     public static BokHandelContext _context = new BokHandelContext();
 
@@ -16,7 +16,7 @@ class Program : TotalInventoryOfEachShop
 
         //The simplest console application ever :D
 
-        TotalInventoryOfEachShop.Inventory();
+        InvetoryMethods.Inventory();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -42,14 +42,14 @@ class Program : TotalInventoryOfEachShop
         Console.Clear();
 
         AddingBookMethods.AddBookToInventory("AKANYK", "9872568142361", 100);
-        TotalInventoryOfEachShop.Inventory();
+        InvetoryMethods.Inventory();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
         Console.Clear();
 
         AddingBookMethods.AddBookToInventory("DROILD", "9872568142361", 100);
-        TotalInventoryOfEachShop.Inventory();
+        InvetoryMethods.Inventory();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();

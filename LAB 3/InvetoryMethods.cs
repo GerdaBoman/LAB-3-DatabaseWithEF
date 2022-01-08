@@ -2,7 +2,7 @@
 
 namespace BookShop2._0
 {
-   public partial class TotalInventoryOfEachShop
+   public partial class InvetoryMethods
     {
         public static BokHandelContext _context = new();
         public static async void Inventory()
