@@ -16,7 +16,7 @@ class Program
 
         //The simplest console application ever :D
         Console.WriteLine("Every shops inventory:");
-        InvetoryMethods.Inventory();
+        Inventory();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -44,7 +44,7 @@ class Program
 
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop AKANYK");
         AddingBookMethods.AddBookToInventory("AKANYK", "9872568142361", 100);
-        InvetoryMethods.Inventory();
+        Inventory();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -52,7 +52,7 @@ class Program
 
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop DROILD");
         AddingBookMethods.AddBookToInventory("DROILD", "9872568142361", 100);
-        InvetoryMethods.Inventory();
+        Inventory();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -121,6 +121,55 @@ class Program
         {
             Console.WriteLine(Book.Title);
         }
+    }
+
+    public static async void Inventory()
+    //how many of each title there is in every shop. 
+    {
+        var count = _context.Inventories.GroupBy(s => s.ShopId)
+            .Select(s => new
+            {
+                s.Key,
+                SUM = s.Sum(q => q.Quantity)
+            });
+
+        foreach (var group in count)
+        {
+            Console.WriteLine("Shop id = {0} Total = {1}", group.Key, group.SUM);
+        }
+
+    }
+
+    public partial class EvertyTitleQuantity
+    {
+        public static BokHandelContext _context = new();
+        public static void TotalInvetory()
+        {
+            var everyBook = (from b in _context.Books
+                             join q in _context.Inventories on b.IsbnId equals q.IsbnId
+                             select new
+                             {
+                                 q.ShopId,
+                                 q.Quantity,
+                                 b.Title
+                             }).ToList();
+
+            var sumOfAllBooks = (from q in _context.Inventories
+                                 where q.Quantity != null
+                                 select q.Quantity).Sum();
+
+
+
+            Console.WriteLine($"Total number of books: {sumOfAllBooks}");
+            Console.WriteLine();
+
+            foreach (var data in everyBook)
+            {
+                Console.WriteLine($"{data.ShopId} {data.Title}  = {data.Quantity}");
+            }
+
+        }
+
     }
 
 

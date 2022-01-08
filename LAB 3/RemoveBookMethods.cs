@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LAB_3
+namespace BookShop2._0
 {
-    partial class RemoveBookMethods
+    partial class RemoveBookMethods : Program
     {
 
-        public static BokHandelContext _context = new();
+        
 
         //Remove book completly from book and inventory table
         public static void RemoveBookCompletly(string isbnID)

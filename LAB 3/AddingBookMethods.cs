@@ -6,14 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LAB_3
+namespace BookShop2._0
 {
-    partial class AddingBookMethods
+    partial class AddingBookMethods :Program
     {
-        public static BokHandelContext _context = new();
-
-
-
+        
         //Adding new book titles to existing author
         public static void AddBookToExistingAuthor(string isbnID, string title, string language, int pageNumber, decimal price, DateTime releaseDate, int authorID, int genreid,
         int publishersID)

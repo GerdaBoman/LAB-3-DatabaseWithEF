@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LAB_3
+namespace BookShop2._0
 {
-    partial  class AuthorMethods
+    partial  class AuthorMethods : Program
     {
-        public static BokHandelContext _context = new();
+       
 
 
         //Adding new author
