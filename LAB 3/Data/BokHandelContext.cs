@@ -30,7 +30,7 @@ namespace LAB_3.Data
             if (!optionsBuilder.IsConfigured)
             {
 
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BokHandel;Integrated Security = true");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=BokHandel;Integrated Security = true");
 
             }
         }
