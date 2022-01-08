@@ -15,20 +15,20 @@ class Program
         _context.Database.EnsureCreated();
 
         //The simplest console application ever :D
-        Console.WriteLine("Every Shops inventory:");
+        Console.WriteLine("Every shops inventory:");
         InvetoryMethods.Inventory();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
         Console.Clear();
 
-        Console.WriteLine("Every titles in every shop and their quanntities");
+        Console.WriteLine("All titles in every shop and their quantities");
         EvertyTitleQuantity.TotalInvetory();
         Console.ReadKey();  
         Console.Clear();
 
         
-        GetBooks("All books before addition of new book ");
+        GetBooks("All book titles before addition of new title ");
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -36,7 +36,7 @@ class Program
 
 
         AddingBookMethods.AddBookToExistingAuthor("9872568142361", "Super Charlie", "Swedish", 37, 56, DateTime.ParseExact("2002/02/10", "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture), 3, 24, 2);
-        GetBooks("After adding book Super chalie book ");
+        GetBooks("After adding Super Charlie book ");
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -58,38 +58,38 @@ class Program
         Console.WriteLine();
         Console.Clear();
 
-        Console.WriteLine("Removing 25 books for Super Charlie from shop AKANYK");
+        Console.WriteLine("Removing 25 books of Super Charlie from shop AKANYK");
         RemoveBookMethods.RemoveQuantityOfBookFromShop("AKANYK", "9872568142361", 25);
         EvertyTitleQuantity.TotalInvetory();
         Console.ReadKey();
         Console.Clear();
 
-        Console.WriteLine("Removing all the books of Super Charlie from shop DROILD");
+        Console.WriteLine("Removing all of the books with title Super Charlie from shop DROILD");
         RemoveBookMethods.RemoveTitleFromShopInventory("9872568142361", "DROILD");
         EvertyTitleQuantity.TotalInvetory();
         Console.ReadKey();
         Console.Clear();
 
-        Console.WriteLine("Adding 25 books of Super Charlier to shop AKANYK");
+        Console.WriteLine("Adding 25 books to Super Charlier to shop AKANYK");
         AddingBookMethods.AddToTitleQuanityInShop("AKANYK", "9872568142361", 25);
         EvertyTitleQuantity.TotalInvetory();
         Console.ReadKey();
         Console.Clear();
 
 
-        Console.WriteLine("Removing Super Charlie from alla the shops and books table");
+        Console.WriteLine("Removing Super Charlie from all the shops and books table");
         RemoveBookMethods.RemoveBookCompletly("9872568142361");
         GetBooks("After book is removed ");
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.Clear();
 
-        Console.WriteLine("Result after all addition and removals");
+        Console.WriteLine("Results after all addition and removals");
         EvertyTitleQuantity.TotalInvetory();
         Console.ReadKey();
         Console.Clear();
 
-        Console.WriteLine("Adding new  author");
+        Console.WriteLine("Adding new author");
         AuthorMethods.AddNewAuthor("Dan", "Brown", DateTime.ParseExact("1964/06/22", "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture));
         Console.WriteLine("After adding new author");
         AuthorMethods.AllAuthors();
