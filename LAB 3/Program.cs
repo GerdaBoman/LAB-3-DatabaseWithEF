@@ -14,6 +14,11 @@ class Program
     {
         _context.Database.EnsureCreated();
 
+        BookShop();
+     
+    }
+    public static void BookShop()
+    {
         //The simplest console application ever :D
         Console.WriteLine("Every shops inventory:");
         InventoryInShops();
@@ -24,7 +29,7 @@ class Program
 
         Console.WriteLine("All titles in every shop and their quantities");
         TotalInvetory();
-        Console.ReadKey();  
+        Console.ReadKey();
         Console.Clear();
 
         GetBooks("All book titles before addition of new title ");
@@ -52,8 +57,8 @@ class Program
         GetBooks("Books");
         //Here it gets fucked up
         Console.Write("Choose book you want to add more books to: ");
-        int userInput = int.Parse(Console.ReadLine());
-        AddingBookMethods.AddBookToInventory(store, userInput.ToString(), add);
+        string userInput = Console.ReadLine();
+        AddingBookMethods.AddToTitleQuanityInShop(store, userInput, add);
 
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
@@ -125,9 +130,6 @@ class Program
         Console.ReadKey();
         Console.WriteLine();
         Console.Clear();
-
-
-
     }
     private static void UserInput()
     {
@@ -192,9 +194,6 @@ class Program
 
     }
 
-    
-
-
-}
+ }
 
 
