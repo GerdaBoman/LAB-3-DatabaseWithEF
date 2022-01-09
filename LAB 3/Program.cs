@@ -49,15 +49,13 @@ class Program
         Console.WriteLine("Add books to store");
         InventoryInShops();
         Console.Write("To which store would you like to add the books(Enter StoreId): ");
-        string store = Console.ReadLine();
+        string? store = Console.ReadLine();
         Console.WriteLine();
         Console.Write("How many books would you like to add: ");
         int add = int.Parse(Console.ReadLine());
         Console.WriteLine();
-        GetBooks("Books");
-        //Here it gets fucked up
         Console.Write("Choose book you want to add more books to: ");
-        string userInput = Console.ReadLine();
+        string? userInput = Console.ReadLine();
         string isbnID = BooksIsbnFromName(userInput);
         AddingBookMethods.AddToTitleQuanityInShop(store, isbnID, add);
 
@@ -151,7 +149,7 @@ class Program
     }
 
     //how many of each title there is in every shop. 
-    public static async void InventoryInShops()
+    public static  void InventoryInShops()
     
     {
         var count = _context.Inventories.GroupBy(s => s.ShopId)
@@ -200,12 +198,16 @@ class Program
     public static string BooksIsbnFromName(string bookTitle)
     {
         var row = (from b in _context.Books
-                      where b.Title == bookTitle
-                      select b.IsbnId);
-       
-        var isbnID = row.FirstOrDefault().ToString();
+                   where b.Title == bookTitle
+                   select b.IsbnId);
+        if (row != null)
+        {
+            var isbnID = row.FirstOrDefault().ToString();
+            return isbnID;
 
-        return isbnID;
+        }
+        return null;
+
     }
 
 
