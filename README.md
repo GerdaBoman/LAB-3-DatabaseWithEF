@@ -7,4 +7,4 @@ This way the database will be created with all the test data that is needed to b
 
 Efter you have installed the database, check that the connection string matches (connection string can be foound in appsettings.json or even in BokHandelContext).
 
-If everyhting matches then there should be no problem to run the program directly. There is already easy user inteferance to test quick data with the methods that are there.
+If everyhting matches then there should be no problem to run the program directly. There is already easy user inteferance to test quickly data with tall the methods that are there.

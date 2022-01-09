@@ -1,12 +1,7 @@
-﻿
-using LAB_3;
-using LAB_3.Data;
-using LAB_3.Model;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
+﻿using LAB_3.Data;
 
 namespace BookShop2._0;
-class Program 
+class Program
 {
     public static BokHandelContext _context = new BokHandelContext();
 
@@ -14,6 +9,12 @@ class Program
     {
         _context.Database.EnsureCreated();
 
+<<<<<<< HEAD
+        BookShop.BookShopPart1();
+        BookShop.BookShopPart2();
+        BookShop.BookShopPart3();
+        BookShop.BookShopPart4();
+=======
         BookShop();
      
     }
@@ -79,58 +80,9 @@ class Program
         Console.ReadKey();
         Console.WriteLine();
         Console.Clear();
+>>>>>>> a9131a3d3de06a9a39dff880b620a1924adb769d
 
-        Console.WriteLine("Removing 25 books of Super Charlie from shop AKANYK");
-        RemoveBookMethods.RemoveQuantityOfBookFromShop("AKANYK", "9872568142361", 25);
-        InventoryMethods.TotalInvetory();
-        Console.ReadKey();
-        Console.Clear();
-
-        Console.WriteLine("Removing all of the books with title Super Charlie from shop DROILD");
-        RemoveBookMethods.RemoveTitleFromShopInventory("9872568142361", "DROILD");
-        InventoryMethods.TotalInvetory();
-        Console.ReadKey();
-        Console.Clear();
-
-        Console.WriteLine("Adding 25 books to Super Charlier to shop AKANYK");
-        AddingBookMethods.AddToTitleQuanityInShop("AKANYK", "9872568142361", 25);
-        InventoryMethods.TotalInvetory();
-        Console.ReadKey();
-        Console.Clear();
-
-
-        Console.WriteLine("Removing Super Charlie from all the shops and books table");
-        RemoveBookMethods.RemoveBookCompletly("9872568142361");
-        InventoryMethods.GetBooks("After book is removed ");
-        Console.Write("Press Any Key to continue");
-        Console.ReadKey();
-        Console.Clear();
-
-        Console.WriteLine("Results after all addition and removals");
-        InventoryMethods.TotalInvetory();
-        Console.ReadKey();
-        Console.Clear();
-
-        Console.WriteLine("Adding new author");
-        AuthorMethods.AddNewAuthor("Dan", "Brown", DateTime.ParseExact("1964/06/22", "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture));
-        Console.WriteLine("After adding new author");
-        AuthorMethods.AllAuthors();
-        Console.Write("Press Any Key to continue");
-        Console.ReadKey();
-        Console.Clear();
-
-
-        Console.Write("Choose author ID to remove: ");
-        int input = int.Parse(Console.ReadLine());
-        Console.WriteLine("Removing author");
-        AuthorMethods.RemoveAuthors(input);
-        AuthorMethods.AllAuthors();
-        Console.Write("Press Any Key to continue");
-        Console.ReadKey();
-        Console.WriteLine();
-        Console.Clear();
     }
-
 }
 
 

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LAB_3.Model;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using LAB_3.Model;
 
 namespace LAB_3.Data
 {

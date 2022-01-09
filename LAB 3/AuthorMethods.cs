@@ -1,23 +1,16 @@
-﻿using LAB_3.Data;
-using LAB_3.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using LAB_3.Model;
 
 namespace BookShop2._0
 {
-    partial  class AuthorMethods : Program
+    partial class AuthorMethods : Program
     {
-       
+
 
 
         //Adding new author
         public static void AddNewAuthor(string fristName, string LastName, DateTime dateOfBirth)
         {
-           
+
             var author = new Author
             {
 
