@@ -58,8 +58,8 @@ class Program
         //Here it gets fucked up
         Console.Write("Choose book you want to add more books to: ");
         string userInput = Console.ReadLine();
-        BooksIsbnFromName(userInput);
-        AddingBookMethods.AddToTitleQuanityInShop(store, userInput, add);
+        string booksIsnd= BooksIsbnFromName(userInput);
+        AddingBookMethods.AddToTitleQuanityInShop(store, booksIsnd, add);
 
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
