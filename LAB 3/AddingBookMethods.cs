@@ -1,4 +1,5 @@
-﻿using LAB_3.Data;
+﻿using BookShop2._0;
+using LAB_3.Data;
 using LAB_3.Model;
 using System;
 using System.Collections.Generic;
@@ -6,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookShop2._0
+namespace LAB_3
 {
-    partial class AddingBookMethods :Program
+    partial class AddingBookMethods : Program
     {
-        
+
         //Adding new book titles to existing author
         public static void AddBookToExistingAuthor(string isbnID, string title, string language, int pageNumber, decimal price, DateTime releaseDate, int authorID, int genreid,
         int publishersID)

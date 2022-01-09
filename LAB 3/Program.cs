@@ -16,7 +16,7 @@ class Program
 
         //The simplest console application ever :D
         Console.WriteLine("Every shops inventory:");
-        Inventory();
+        InventoryInShops();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -27,13 +27,11 @@ class Program
         Console.ReadKey();  
         Console.Clear();
 
-        
         GetBooks("All book titles before addition of new title ");
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
         Console.Clear();
-
 
         AddingBookMethods.AddBookToExistingAuthor("9872568142361", "Super Charlie", "Swedish", 37, 56, DateTime.ParseExact("2002/02/10", "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture), 3, 24, 2);
         GetBooks("After adding Super Charlie book ");
@@ -42,9 +40,29 @@ class Program
         Console.WriteLine();
         Console.Clear();
 
+        //New user function
+        Console.WriteLine("Add books to store");
+        InventoryInShops();
+        Console.Write("To which store would you like to add the books(Enter StoreId): ");
+        string store = Console.ReadLine();
+        Console.WriteLine();
+        Console.Write("How many books would you like to add: ");
+        int add = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+        GetBooks("Books");
+        //Here it gets fucked up
+        Console.Write("Choose book you want to add more books to: ");
+        int userInput = int.Parse(Console.ReadLine());
+        AddingBookMethods.AddBookToInventory(store, userInput.ToString(), add);
+
+        Console.Write("Press Any Key to continue");
+        Console.ReadKey();
+        Console.WriteLine();
+        Console.Clear();
+
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop AKANYK");
         AddingBookMethods.AddBookToInventory("AKANYK", "9872568142361", 100);
-        Inventory();
+        InventoryInShops();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -52,7 +70,7 @@ class Program
 
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop DROILD");
         AddingBookMethods.AddBookToInventory("DROILD", "9872568142361", 100);
-        Inventory();
+        InventoryInShops();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
         Console.WriteLine();
@@ -111,20 +129,26 @@ class Program
 
 
     }
+    private static void UserInput()
+    {
+        Console.Write("Choose book number you want to add more books to: ");
+        int userInput = int.Parse(Console.ReadLine());
 
+    }
     //Print all book titles 
     private static void GetBooks(string text)
     {
+        int i = 1;
         var book = _context.Books.ToList();
         Console.WriteLine($"{text} number of books: {book.Count} ");
         foreach (var Book in book)
         {
-            Console.WriteLine(Book.Title);
+            Console.WriteLine($"{i++}: " + Book.Title);
         }
     }
 
     //how many of each title there is in every shop. 
-    public static async void Inventory()
+    public static async void InventoryInShops()
     
     {
         var count = _context.Inventories.GroupBy(s => s.ShopId)
@@ -140,7 +164,6 @@ class Program
         }
 
     }
-
 
     public static void TotalInvetory()
     {
