@@ -56,6 +56,8 @@ partial class AddingBookMethods : Program
             _context.SaveChanges();
         }
     }
+    
+    //Adding to book quantity to specific book from user input
     public static string BooksIsbnFromName(string bookTitle)
     {
         var row = (from b in _context.Books
