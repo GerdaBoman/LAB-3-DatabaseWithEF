@@ -4,6 +4,8 @@
     {
         public static void BookShopPart1()
         {
+            //First part consists of mostley inventory methods and a adding new book to exsisting author
+        
             Console.WriteLine("Every shops inventory:");
             InventoryMethods.InventoryInShops();
             Console.Write("Press Any Key to continue");
@@ -21,7 +23,8 @@
             Console.ReadKey();
             Console.WriteLine();
             Console.Clear();
-
+            
+            //Adding new book to existing author
             AddingBookMethods.AddBookToExistingAuthor("9872568142361", "Super Charlie", "Swedish", 37, 56, DateTime.ParseExact("2002/02/10", "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture), 3, 24, 2);
             InventoryMethods.GetBooks("After adding Super Charlie book ");
             Console.Write("Press Any Key to continue");
@@ -31,7 +34,8 @@
         }
         public static void BookShopPart2()
         {
-            //Sample of adding extra book quantity to excisting book title  with user input
+            //Second part is a sample of adding extra book quantity to existing book titles with user input
+            
             Console.WriteLine("Add books to store");
             InventoryMethods.InventoryInShops();
             Console.Write("To which store would you like to add the books(Enter StoreId): ");
@@ -52,6 +56,8 @@
         }
         public static void BookShopPart3()
         {
+            //Third part cosist of adding and removing quantity of the newley added book to/from specific bookstores
+            
             Console.WriteLine("Adding 100 books of Super Charlie to bookshop AKANYK");
             AddingBookMethods.AddNewBookToInventory("AKANYK", "9872568142361", 100);
             InventoryMethods.InventoryInShops();
@@ -101,6 +107,8 @@
         }
         public static void BookShopPart4()
         {
+            //Fourth part is a sampel of adding new author and removing author by it's id
+            
             Console.WriteLine("Adding new author");
             AuthorMethods.AddNewAuthor("Dan", "Brown", DateTime.ParseExact("1964/06/22", "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture));
             Console.WriteLine("After adding new author");
