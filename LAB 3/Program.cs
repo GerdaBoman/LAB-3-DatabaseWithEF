@@ -58,6 +58,7 @@ class Program
         //Here it gets fucked up
         Console.Write("Choose book you want to add more books to: ");
         string userInput = Console.ReadLine();
+        BooksIsbnFromName(userInput);
         AddingBookMethods.AddToTitleQuanityInShop(store, userInput, add);
 
         Console.Write("Press Any Key to continue");
@@ -192,8 +193,20 @@ class Program
             Console.WriteLine($"{data.ShopId} {data.Title}  = {data.Quantity}");
         }
 
+
+
     }
 
- }
+    public static string BooksIsbnFromName(string bookTitle)
+    {
+        var isbnID = (from b in _context.Books
+                      where b.Title == bookTitle
+                      select b.IsbnId).ToString();
+
+        return isbnID;
+    }
+
+
+}
 
 

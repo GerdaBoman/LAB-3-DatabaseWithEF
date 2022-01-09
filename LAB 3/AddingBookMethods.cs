@@ -12,7 +12,7 @@ namespace LAB_3
     partial class AddingBookMethods : Program
     {
 
-        //Adding new book titles to existing author
+        //Adding new book title to existing author
         public static void AddBookToExistingAuthor(string isbnID, string title, string language, int pageNumber, decimal price, DateTime releaseDate, int authorID, int genreid,
         int publishersID)
         {
