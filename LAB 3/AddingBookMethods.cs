@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LAB_3
-{
+namespace BookShop2._0;
+
     partial class AddingBookMethods : Program
     {
 
@@ -77,4 +77,4 @@ namespace LAB_3
 
         }
     }
-}
+

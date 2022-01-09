@@ -10,7 +10,6 @@ namespace BookShop2._0
     partial class RemoveBookMethods : Program
     {
 
-        
 
         //Remove book completly from book and inventory table
         public static void RemoveBookCompletly(string isbnID)

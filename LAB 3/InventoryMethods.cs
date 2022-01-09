@@ -7,8 +7,8 @@ using BookShop2._0;
 using LAB_3.Data;
 using LAB_3.Model;
 
-namespace LAB_3
-{
+namespace BookShop2._0;
+
     partial class InventoryMethods : Program
     {
         public static void GetBooks(string text)
@@ -70,4 +70,4 @@ namespace LAB_3
         }
 
     }
-}
+
