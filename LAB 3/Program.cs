@@ -58,8 +58,8 @@ class Program
         //Here it gets fucked up
         Console.Write("Choose book you want to add more books to: ");
         string userInput = Console.ReadLine();
-        string booksIsnd= BooksIsbnFromName(userInput);
-        AddingBookMethods.AddToTitleQuanityInShop(store, booksIsnd, add);
+        string isbnID = BooksIsbnFromName(userInput);
+        AddingBookMethods.AddToTitleQuanityInShop(store, isbnID, add);
 
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
@@ -199,9 +199,11 @@ class Program
 
     public static string BooksIsbnFromName(string bookTitle)
     {
-        var isbnID = (from b in _context.Books
+        var row = (from b in _context.Books
                       where b.Title == bookTitle
-                      select b.IsbnId).ToString();
+                      select b.IsbnId);
+       
+        var isbnID = row.FirstOrDefault().ToString();
 
         return isbnID;
     }
