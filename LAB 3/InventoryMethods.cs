@@ -4,9 +4,9 @@ namespace BookShop2._0;
 
 partial class InventoryMethods : Program
 {
+    //Prints every book title there is in the shops
     public static void GetBooks(string text)
     {
-
         var book = _context.Books.ToList();
         Console.WriteLine($"{text} number of books: {book.Count} ");
         foreach (var Book in book)
@@ -15,9 +15,8 @@ partial class InventoryMethods : Program
         }
     }
 
-    //how many of each title there is in every shop. 
+    //Prints how many books there is in every shop. 
     public static void InventoryInShops()
-
     {
         var count = _context.Inventories.GroupBy(s => s.ShopId)
             .Select(s => new
@@ -33,6 +32,7 @@ partial class InventoryMethods : Program
 
     }
 
+    //Prints every book title and quantity in shop.
     public static void TotalInvetory()
     {
         var everyBook = (from b in _context.Books
@@ -48,8 +48,6 @@ partial class InventoryMethods : Program
                              where q.Quantity != null
                              select q.Quantity).Sum();
 
-
-
         Console.WriteLine($"Total number of books: {sumOfAllBooks}");
         Console.WriteLine();
 
@@ -57,9 +55,6 @@ partial class InventoryMethods : Program
         {
             Console.WriteLine($"{data.ShopId} {data.Title}  = {data.Quantity}");
         }
-
-
-
     }
 
 }
