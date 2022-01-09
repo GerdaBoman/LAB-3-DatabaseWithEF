@@ -66,7 +66,7 @@ class Program
         Console.Clear();
 
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop AKANYK");
-        AddingBookMethods.AddBookToInventory("AKANYK", "9872568142361", 100);
+        AddingBookMethods.AddNewBookToInventory("AKANYK", "9872568142361", 100);
         InventoryInShops();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
@@ -74,7 +74,7 @@ class Program
         Console.Clear();
 
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop DROILD");
-        AddingBookMethods.AddBookToInventory("DROILD", "9872568142361", 100);
+        AddingBookMethods.AddNewBookToInventory("DROILD", "9872568142361", 100);
         InventoryInShops();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();

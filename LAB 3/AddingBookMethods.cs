@@ -36,7 +36,7 @@ namespace LAB_3
 
         //Adding new book to Inventory
 
-        public static void AddBookToInventory(string shopID, string isbnId, int quantity)
+        public static void AddNewBookToInventory(string shopID, string isbnId, int quantity)
         {
             var insertInInventory = new Inventory
             {
