@@ -45,7 +45,7 @@ class Program
         Console.WriteLine();
         Console.Clear();
 
-        //New user function
+        //Sample of adding extra book quantity to excisting book title  with user input
         Console.WriteLine("Add books to store");
         InventoryMethods.InventoryInShops();
         Console.Write("To which store would you like to add the books(Enter StoreId): ");
