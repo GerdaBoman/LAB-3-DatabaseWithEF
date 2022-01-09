@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookShop2._0
 {
@@ -16,6 +17,7 @@ namespace BookShop2._0
         //Adding new author
         public static void AddNewAuthor(string fristName, string LastName, DateTime dateOfBirth)
         {
+           
             var author = new Author
             {
 

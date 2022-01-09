@@ -53,7 +53,7 @@ class Program
         //Here it gets fucked up
         Console.Write("Choose book you want to add more books to: ");
         int userInput = int.Parse(Console.ReadLine());
-        AddingBookMethods.AddBookToInventory(store, userInput.ToString(), add);
+        AddingBookMethods.AddNewBookToInventory(store, userInput.ToString(), add);
 
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
@@ -61,7 +61,7 @@ class Program
         Console.Clear();
 
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop AKANYK");
-        AddingBookMethods.AddBookToInventory("AKANYK", "9872568142361", 100);
+        AddingBookMethods.AddNewBookToInventory("AKANYK", "9872568142361", 100);
         InventoryInShops();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
@@ -69,7 +69,7 @@ class Program
         Console.Clear();
 
         Console.WriteLine("Adding 100 books of Super Charlie to bookshop DROILD");
-        AddingBookMethods.AddBookToInventory("DROILD", "9872568142361", 100);
+        AddingBookMethods.AddNewBookToInventory("DROILD", "9872568142361", 100);
         InventoryInShops();
         Console.Write("Press Any Key to continue");
         Console.ReadKey();
