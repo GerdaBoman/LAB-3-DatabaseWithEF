@@ -141,12 +141,12 @@ class Program
     //Print all book titles 
     private static void GetBooks(string text)
     {
-        int i = 1;
+        
         var book = _context.Books.ToList();
         Console.WriteLine($"{text} number of books: {book.Count} ");
         foreach (var Book in book)
         {
-            Console.WriteLine($"{i++}: " + Book.Title);
+            Console.WriteLine(Book.Title);
         }
     }
 
