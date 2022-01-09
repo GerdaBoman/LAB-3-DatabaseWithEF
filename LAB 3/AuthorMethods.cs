@@ -4,16 +4,11 @@ namespace BookShop2._0
 {
     partial class AuthorMethods : Program
     {
-
-
-
         //Adding new author
         public static void AddNewAuthor(string fristName, string LastName, DateTime dateOfBirth)
         {
-
             var author = new Author
             {
-
                 FirstName = fristName,
                 LastName = LastName,
                 DateOfBirth = dateOfBirth,
@@ -22,11 +17,10 @@ namespace BookShop2._0
             _context.SaveChanges();
         }
 
-        //Remove author from their ID number
+        //Remove author by their ID number
         public static void RemoveAuthors(int iD)
         {
-
-            var author = (from a in _context.Authors
+           var author = (from a in _context.Authors
                           where a.Id == iD
                           select a).SingleOrDefault();
             if (author == null)
@@ -41,8 +35,6 @@ namespace BookShop2._0
                 _context.SaveChanges();
                 Console.WriteLine("Author removed!");
             }
-
-
         }
 
         //Print all author list
@@ -64,7 +56,5 @@ namespace BookShop2._0
             }
 
         }
-
-
     }
 }
