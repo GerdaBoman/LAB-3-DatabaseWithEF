@@ -130,12 +130,7 @@ class Program
         Console.WriteLine();
         Console.Clear();
     }
-    private static void UserInput()
-    {
-        Console.Write("Choose book number you want to add more books to: ");
-        int userInput = int.Parse(Console.ReadLine());
-
-    }
+   
     //Print all book titles 
     private static void GetBooks(string text)
     {
