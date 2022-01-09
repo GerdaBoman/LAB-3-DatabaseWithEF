@@ -3,9 +3,6 @@ namespace BookShop2._0;
 
 partial class RemoveBookMethods : Program
 {
-
-        
-
     //Remove book completly from book and inventory table
     public static void RemoveBookCompletly(string isbnID)
     {
@@ -18,12 +15,10 @@ partial class RemoveBookMethods : Program
             _context.Inventories.Remove(bookInInventory);
             _context.Books.Remove(bookInBooks);
             _context.SaveChanges();
-
         }
         else
         {
             Console.WriteLine("No book found");
-
         }
     }
 
@@ -39,17 +34,15 @@ partial class RemoveBookMethods : Program
         {
             _context.Inventories.Remove(bookInShop);
             _context.SaveChanges();
-
         }
         else
+        }
             Console.WriteLine("Book not found");
-    }
+        }
 
-    //Remove amount of books from book titles quantity and spesific shop
+    //Remove a amount of books from book titles quantity and spesific shop
     public static void RemoveQuantityOfBookFromShop(string shopId, string isbnId, int amountBook)
     {
-
-
         var bookInStore = _context.Inventories.Where(i => i.ShopId == shopId && i.IsbnId == isbnId).SingleOrDefault();
         if (bookInStore != null)
         {
@@ -57,6 +50,4 @@ partial class RemoveBookMethods : Program
             _context.SaveChanges();
         }
     }
-
-
 }
