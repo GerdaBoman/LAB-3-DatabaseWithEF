@@ -62,5 +62,19 @@ namespace LAB_3
                 _context.SaveChanges();
             }
         }
+        public static string BooksIsbnFromName(string bookTitle)
+        {
+            var row = (from b in _context.Books
+                       where b.Title == bookTitle
+                       select b.IsbnId);
+            if (row != null)
+            {
+                var isbnID = row.FirstOrDefault().ToString();
+                return isbnID;
+
+            }
+            return null;
+
+        }
     }
 }
