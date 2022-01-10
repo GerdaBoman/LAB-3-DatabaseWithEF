@@ -36,7 +36,7 @@ partial class RemoveBookMethods : Program
             _context.SaveChanges();
         }
         else
-        }
+        {
             Console.WriteLine("Book not found");
         }
     }

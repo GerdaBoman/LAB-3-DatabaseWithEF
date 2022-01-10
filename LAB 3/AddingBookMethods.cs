@@ -53,7 +53,7 @@ partial class AddingBookMethods : Program
             _context.SaveChanges();
         }
     }
-    
+
     //Adding to book quantity to specific book from user input
     public static string BooksIsbnFromName(string bookTitle)
     {
