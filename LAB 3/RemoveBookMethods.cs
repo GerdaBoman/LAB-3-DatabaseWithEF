@@ -39,6 +39,7 @@ partial class RemoveBookMethods : Program
         }
             Console.WriteLine("Book not found");
         }
+    }
 
     //Remove a amount of books from book titles quantity and spesific shop
     public static void RemoveQuantityOfBookFromShop(string shopId, string isbnId, int amountBook)
