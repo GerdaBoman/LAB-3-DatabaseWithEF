@@ -26,12 +26,10 @@ namespace BookShop2._0
             if (author == null)
             {
                 Console.WriteLine("No author found");
-
             }
             else
             {
                 _context.Authors.Remove(author);
-
                 _context.SaveChanges();
                 Console.WriteLine("Author removed!");
             }
