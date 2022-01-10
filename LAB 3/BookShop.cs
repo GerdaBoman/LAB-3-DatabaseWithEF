@@ -44,7 +44,7 @@ partial class BookShop : Program
         Console.Write("How many books would you like to add: ");
         int add = int.Parse(Console.ReadLine());
         Console.WriteLine();
-        Console.Write("Choose book you want to add more books to: ");
+        Console.Write("Choose book you want to add more books to (Enter title): ");
         string? userInput = Console.ReadLine();
         string isbnID = AddingBookMethods.BooksIsbnFromName(userInput);
         AddingBookMethods.AddToTitleQuanityInShop(store, isbnID, add);
