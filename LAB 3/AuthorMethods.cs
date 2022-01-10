@@ -9,8 +9,8 @@ namespace BookShop2._0
         {
             var author = new Author
             {
-                FirstName = fristName,
-                LastName = LastName,
+                FirstName = firstName,
+                LastName = lastName,
                 DateOfBirth = dateOfBirth,
             };
             _context.Authors.Add(author);
