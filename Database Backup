@@ -82,7 +82,7 @@ INSERT INTO Authors (FirstName, LastName, DateOfBirth)
 VALUES ('Stephan', 'King', '1947/09/21')
 
 INSERT INTO Authors (FirstName, LastName, DateOfBirth)
-VALUES ('Camilla', 'Läckberg', '1974/08/30')
+VALUES ('Camilla', 'LÃ¤ckberg', '1974/08/30')
 
 INSERT INTO Authors (FirstName, LastName, DateOfBirth)
 VALUES ('Joanne', 'Rowling', '1965/07/31')
@@ -168,8 +168,8 @@ INSERT INTO Publishers(
 )
 
 VALUES(
-	'Forum Bokförlag',
-	'Sveavägen 56, Stockholm, Sweden',
+	'Forum BokfÃ¶rlag',
+	'SveavÃ¤gen 56, Stockholm, Sweden',
 	'08-696 84 40'
 )
 GO
@@ -460,9 +460,9 @@ INSERT INTO Shops(
 VALUES(
 	'AKANYK',
 	'Akademibokhandeln',
-	'Västra Storgatan 32',
+	'VÃ¤stra Storgatan 32',
 	'0155291930',
-	'Nyköping')
+	'NykÃ¶ping')
 
 INSERT INTO Shops(
 	[Shop_ID], 
@@ -474,7 +474,7 @@ INSERT INTO Shops(
 VALUES(
 	'ENGSHO',
 	'The English Bookshop',
-	'Södermannagatan 22',
+	'SÃ¶dermannagatan 22',
 	'087905510',
 	'Stockholm')
 
@@ -488,7 +488,7 @@ INSERT INTO Shops(
 VALUES(
 	'SFTORE',
 	'SF Bookstore',
-	'Västerlånggatan 48',
+	'VÃ¤sterlÃ¥nggatan 48',
 	'082135052',
 	'Stockholm')
 
@@ -529,7 +529,7 @@ GO
 
 --Info of singel shop
 SELECT Shop_Name, Shop_Address, Shop_Town FROM Shops
-WHERE Shop_Town = 'Nyköping'
+WHERE Shop_Town = 'NykÃ¶ping'
 
 GO
 	
