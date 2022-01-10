@@ -1,7 +1,7 @@
 ﻿using LAB_3.Model;
 
 namespace BookShop2._0
-{
+
     partial class AuthorMethods : Program
     {
         //Adding new author
@@ -55,4 +55,4 @@ namespace BookShop2._0
 
         }
     }
-}
+
