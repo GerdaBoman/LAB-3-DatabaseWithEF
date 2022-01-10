@@ -12,7 +12,6 @@ partial class AddingBookMethods : Program
     {
         var book = new Book
         {
-
             IsbnId = isbnID,
             Title = title,
             Language = language,
@@ -42,8 +41,6 @@ partial class AddingBookMethods : Program
 
         _context.Inventories.Add(insertInInventory);
         _context.SaveChanges();
-
-
     }
 
     //adding extra books into book title quantity in specific shop
