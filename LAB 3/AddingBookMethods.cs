@@ -1,11 +1,8 @@
 ﻿using LAB_3.Model;
 
-
 namespace BookShop2._0;
-
 partial class AddingBookMethods : Program
 {
-
     //Adding new book title to existing author
     public static void AddBookToExistingAuthor(string isbnID, string title, string language, int pageNumber, decimal price, DateTime releaseDate, int authorID, int genreid,
     int publishersID)
@@ -28,7 +25,6 @@ partial class AddingBookMethods : Program
     }
 
     //Adding new book to Inventory
-
     public static void AddNewBookToInventory(string shopID, string isbnId, int quantity)
     {
         var insertInInventory = new Inventory
